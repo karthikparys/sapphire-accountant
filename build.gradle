@@ -1,0 +1,29 @@
+group 'ae.kbgroup'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.5
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework:spring-context:4.3.7.RELEASE")
+    compile("org.springframework:spring-webmvc:4.3.7.RELEASE")
+    compile("org.springframework.data:spring-data-jpa:1.7.2.RELEASE")
+
+    compile("com.zaxxer:HikariCP:2.2.5")
+    compile("org.hibernate:hibernate-entitymanager:4.3.8.Final")
+
+    compile("com.fasterxml.jackson.core:jackson-databind:2.7.5")
+    //compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.7.5")
+    compile("javax.servlet:javax.servlet-api:3.1.0")
+
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
